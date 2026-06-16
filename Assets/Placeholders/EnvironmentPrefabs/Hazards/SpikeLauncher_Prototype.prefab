@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8098747770185549636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7444814976234915193}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7444814976234915193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098747770185549636}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.872, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2271512559668243927}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &1732955524399385148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.355636
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.99999976
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8674532
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      propertyPath: m_Name
+      value: SpikeLauncher_Prototype
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7444814976234915193}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7427539617650001296}
+  m_SourcePrefab: {fileID: 100100000, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+--- !u!1 &1499091813400409965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+  m_PrefabInstance: {fileID: 1732955524399385148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7427539617650001296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499091813400409965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b33d2a350adf248b757193e7b3bffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: "This hazard will send out a projectile which causes damage to the player
+    on contact. \n The damage value should be a negative number so as to actually
+    subtract health from the player. \n To set up in the scene, you need: \n 1. An
+    empty game object with this script attached, placed where you want the spawner.
+    \n 2. A child object to be assigned as the spawnpoint, pointing in the direction
+    that you want the projectile to go. \n 3. The projectile prefab component assigned
+    to the appropriate slot. \n 4. (Optional) a visual mesh for the spawn point as
+    a child object, with no collider as the collider would potentially impact the
+    projectile when it spawns depending on the placement."
+  projectileDamage: 0
+  projectileVelocity: {x: 0, y: 0, z: 0}
+  projectileSpeed: 0
+  projectilePrefab: {fileID: 0}
+  projectileSpawnPoint: {fileID: 0}
+  shootProjectileClip: {fileID: 0}
+--- !u!4 &2271512559668243927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04f9b56fca7c87344a9128e2760c7851, type: 3}
+  m_PrefabInstance: {fileID: 1732955524399385148}
+  m_PrefabAsset: {fileID: 0}
