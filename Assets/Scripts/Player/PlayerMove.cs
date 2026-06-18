@@ -63,6 +63,7 @@ public class PlayerMove : CanTriggerCollisionActivator
         //set the spawn point of the player to wherever the character model is placed in the Unity inspector
         SetRespawn();
 
+
         // set the CinemachineBrain variable
         if (!cam.TryGetComponent<CinemachineBrain>(out brain))
         {
