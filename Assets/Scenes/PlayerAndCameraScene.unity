@@ -137,15 +137,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 6.49
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: -3.55
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalRotation.w
@@ -429,15 +429,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.0000005
+      value: 9.55
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.375
+      value: 1.9549999
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2000034
+      value: -3.3499973
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 1300372591}
   - component: {fileID: 1300372590}
   - component: {fileID: 1300372589}
+  - component: {fileID: 1300372593}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -579,6 +580,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1300372593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300372588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efa5e912e887d489f97494a6416c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IToggleChangePositionReceiver
+  Notes: "Attach this script to any game object which you wish to have move that
+    can be manually opened and closed.\nWhen receiving a positive signal, it will
+    move to openPosition.\nWhen receiving a negatibe signal, it will move to the
+    closedPosition. \nUsage examples: Moving horizontal platform, moving vertical
+    platform (elevator), sliding door (vertical or horizontal)"
+  positionA: {x: 0, y: 0, z: 0}
+  positionB: {x: 0, y: 0, z: 0}
+  startAtPositionA: 0
+  objectSlideSpeed: 1
 --- !u!1001 &1319487276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,15 +627,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.0000005
+      value: 9.55
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.375
+      value: 1.9549999
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2000034
+      value: -3.3499973
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
