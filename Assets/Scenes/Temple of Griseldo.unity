@@ -1851,8 +1851,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9165276116716134929, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 100367608}
   m_SourcePrefab: {fileID: 100100000, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+--- !u!1 &100367607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9165276116716134929, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+  m_PrefabInstance: {fileID: 100367606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &100367608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100367607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43db1af4fd1c9464c9fe0a9675845ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanTriggerCollisionActivator
 --- !u!1001 &100930778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2326,6 +2346,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4555756751219664800, guid: c62884c93d590b140824534492fd1b6a, type: 3}
   m_PrefabInstance: {fileID: 122386515}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &124164889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040838768727073126, guid: 4ced77fd8b431a1489e738916339a20e, type: 3}
+  m_PrefabInstance: {fileID: 271544076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &124164896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124164889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6652bf4f701464ebb0c10515d8d752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IToggleTransmitter
+  receiverObject: {fileID: 1300599850}
+--- !u!114 &124164897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124164889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a56ec19edec0d458eb13020b8feed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleColliderActivator
+  DeveloperNote: "This Activator will detect any object with a 'CanTriggerCollisionActivator'
+    component that moves into it's trigger collider. \nOnce it has activated the
+    attached transmitter, it will activate it again if the player / other object
+    that is 'pressing' it moves away. \nUse case example: A door which requires a
+    moveable box to be placed on this Activator to keep the door open."
+  activatorReadyPosition: {x: 0, y: 0, z: 0}
+  activatorUsedPosition: {x: 0, y: 0, z: 0}
+  activatorMoveSpeed: 0
+  snapDistance: 0
+  activatedClip: {fileID: 0}
+  resetClip: {fileID: 0}
 --- !u!1001 &129621136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3911,7 +3972,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2040838768727073126, guid: 4ced77fd8b431a1489e738916339a20e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 124164897}
+    - targetCorrespondingSourceObject: {fileID: 2040838768727073126, guid: 4ced77fd8b431a1489e738916339a20e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 124164896}
   m_SourcePrefab: {fileID: 100100000, guid: 4ced77fd8b431a1489e738916339a20e, type: 3}
 --- !u!1001 &274420979
 PrefabInstance:
@@ -10216,6 +10283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PushCube_Prototype
       objectReference: {fileID: 0}
+    - target: {fileID: 5977664929353944970, guid: e7e47373eadff2846b592826110499cc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6466956006990779696, guid: e7e47373eadff2846b592826110499cc, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -10303,7 +10374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc0393214f549741811908ad9ad9d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IPushBlock
-  pushSpeed: 5
+  pushSpeed: 0.2
 --- !u!65 &731921421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12275,7 +12346,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 330079060133897344, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1300599856}
   m_SourcePrefab: {fileID: 100100000, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
 --- !u!1001 &835060647
 PrefabInstance:
@@ -18281,6 +18355,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4555756751219664800, guid: c62884c93d590b140824534492fd1b6a, type: 3}
   m_PrefabInstance: {fileID: 1296587882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1300599850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 330079060133897344, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
+  m_PrefabInstance: {fileID: 834859959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300599856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300599850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efa5e912e887d489f97494a6416c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IToggleChangePositionReceiver
+  Notes: "Attach this script to any game object which you wish to have move that
+    can be manually opened and closed.\nWhen receiving a positive signal, it will
+    move to openPosition.\nWhen receiving a negatibe signal, it will move to the
+    closedPosition. \nUsage examples: Moving horizontal platform, moving vertical
+    platform (elevator), sliding door (vertical or horizontal)"
+  positionA: {x: -8.1, y: 0, z: 2.645}
+  positionB: {x: -8.1, y: 4.25, z: 2.645}
+  startAtPositionA: 1
+  objectSlideSpeed: 1
 --- !u!1 &1308892871
 GameObject:
   m_ObjectHideFlags: 0
@@ -18762,15 +18862,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.07162
+      value: -33.725
       objectReference: {fileID: 0}
     - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.034462214
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -41.06635
+      value: -30.410126
       objectReference: {fileID: 0}
     - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18804,11 +18904,151 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePadBasket_Prototype
       objectReference: {fileID: 0}
+    - target: {fileID: 4274550468607005939, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274550468607005939, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274550468607005939, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_Size.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4274550468607005939, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1379214214}
+    - targetCorrespondingSourceObject: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1379214221}
   m_SourcePrefab: {fileID: 100100000, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+--- !u!1 &1379214212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+  m_PrefabInstance: {fileID: 1379214211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1379214214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379214212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a56ec19edec0d458eb13020b8feed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleColliderActivator
+  DeveloperNote: "This Activator will detect any object with a 'CanTriggerCollisionActivator'
+    component that moves into it's trigger collider. \nOnce it has activated the
+    attached transmitter, it will activate it again if the player / other object
+    that is 'pressing' it moves away. \nUse case example: A door which requires a
+    moveable box to be placed on this Activator to keep the door open."
+  activatorReadyPosition: {x: 0, y: 0, z: 0}
+  activatorUsedPosition: {x: 0, y: 0, z: 0}
+  activatorMoveSpeed: 0
+  snapDistance: 0.2
+  activatedClip: {fileID: 0}
+  resetClip: {fileID: 0}
+--- !u!114 &1379214221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379214212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e749f06511a2f4ebf63d569aab020c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::INegativeTransmitter
+  receiverObject: {fileID: 2136110885}
+--- !u!1001 &1385191110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21739832
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25185183
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.8321257
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393103031696947371, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165276116716134929, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      propertyPath: m_Name
+      value: PickupBall_Prototype (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9165276116716134929, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1385191112}
+  m_SourcePrefab: {fileID: 100100000, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+--- !u!1 &1385191111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9165276116716134929, guid: 3025f42dd1c973040823ca2cad641d28, type: 3}
+  m_PrefabInstance: {fileID: 1385191110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1385191112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385191111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43db1af4fd1c9464c9fe0a9675845ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanTriggerCollisionActivator
 --- !u!1001 &1395138657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20957,6 +21197,128 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1143770838909271610, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
   m_PrefabInstance: {fileID: 1521662048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1532591053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1965478065}
+    m_Modifications:
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.047910452
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.023999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.41920424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      propertyPath: m_Name
+      value: PressurePadBasket_Prototype (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532591057}
+    - targetCorrespondingSourceObject: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532591056}
+  m_SourcePrefab: {fileID: 100100000, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+--- !u!4 &1532591054 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2484497369044595600, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+  m_PrefabInstance: {fileID: 1532591053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1532591055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2968265354632751402, guid: b183f10061676ef40b5f44c6d50bbba1, type: 3}
+  m_PrefabInstance: {fileID: 1532591053}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1532591056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532591055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05aac3b4bb04db4ead87ffbf99eaa28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ITimedPositiveTransmitter
+  receiverObject: {fileID: 1965478066}
+  toggleTime: 5
+--- !u!114 &1532591057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532591055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a56ec19edec0d458eb13020b8feed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ToggleColliderActivator
+  DeveloperNote: "This Activator will detect any object with a 'CanTriggerCollisionActivator'
+    component that moves into it's trigger collider. \nOnce it has activated the
+    attached transmitter, it will activate it again if the player / other object
+    that is 'pressing' it moves away. \nUse case example: A door which requires a
+    moveable box to be placed on this Activator to keep the door open."
+  activatorReadyPosition: {x: 0, y: 0, z: 0}
+  activatorUsedPosition: {x: 0, y: 0, z: 0}
+  activatorMoveSpeed: 0
+  snapDistance: 0
+  activatedClip: {fileID: 0}
+  resetClip: {fileID: 0}
 --- !u!1001 &1533110689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27126,6 +27488,136 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4555756751219664800, guid: c62884c93d590b140824534492fd1b6a, type: 3}
   m_PrefabInstance: {fileID: 1963604644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1965478064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 701676870}
+    m_Modifications:
+    - target: {fileID: 1542505748485248802, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_Name
+      value: Platform_Prototype
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.9235497
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.597666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475743090357537326, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475743090357537326, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773686033694435438, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532591054}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1542505748485248802, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1965478073}
+    - targetCorrespondingSourceObject: {fileID: 1542505748485248802, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1965478074}
+  m_SourcePrefab: {fileID: 100100000, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+--- !u!4 &1965478065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2171795374145424792, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+  m_PrefabInstance: {fileID: 1965478064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1965478066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1542505748485248802, guid: fd99930e01aaada43b28850823004ea3, type: 3}
+  m_PrefabInstance: {fileID: 1965478064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1965478073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965478066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d2c57f86bb27040b25f466d28247f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IRepeatingChangePositionReceiver
+  Notes: "Attach this script to any game object which you wish to have move. Set
+    up at least two positions for the object to cycle between by adding new Vector3
+    items to the 'positions' list, and entering the world coordinates which you want
+    the object to move to. \n When receiving a positive signal, the object will head
+    towards the next item in the list, and loop back around to the first item if
+    it reaches the last item. If receiving a negative signal, it will head towards
+    the previous item in the list or loop around to the first item if it has reached
+    the end of the list. \n Usage examples: Moving horizontal platform, moving vertical
+    platform (elevator), sliding door (vertical or horizontal)"
+  positions:
+  - {x: -5.9235497, y: 10.56, z: 5.597666}
+  - {x: -5.9235497, y: 0.2000001, z: 5.597666}
+  objectSlideSpeed: 1
+--- !u!65 &1965478074
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965478066}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9871902, y: 0.10000002, z: 1.9871902}
+  m_Center: {x: 0, y: -0.05000001, z: 0}
 --- !u!1001 &1967258394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29189,7 +29681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1143770838909271610, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1143770838909271610, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29253,10 +29745,10 @@ MonoBehaviour:
     move to openPosition.\nWhen receiving a negatibe signal, it will move to the
     closedPosition. \nUsage examples: Moving horizontal platform, moving vertical
     platform (elevator), sliding door (vertical or horizontal)"
-  positionA: {x: -32.203, y: -0.01, z: -24.693913}
-  positionB: {x: -32.203, y: 5, z: -24.693913}
+  positionA: {x: -32.203, y: 0, z: -24.693913}
+  positionB: {x: -32.203, y: 5, z: -24.693}
   startAtPositionA: 1
-  objectSlideSpeed: 0
+  objectSlideSpeed: 1
 --- !u!1001 &2141352542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29663,6 +30155,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3162140308230606144, guid: 16a252c0889e97a4cb8ad536950bbf3d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 377514118}
+    - targetCorrespondingSourceObject: {fileID: 3162140308230606144, guid: 16a252c0889e97a4cb8ad536950bbf3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1965478065}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16a252c0889e97a4cb8ad536950bbf3d, type: 3}
 --- !u!1001 &4580263952257711426
@@ -29835,3 +30330,4 @@ SceneRoots:
   - {fileID: 731921411}
   - {fileID: 1824987741}
   - {fileID: 458181902}
+  - {fileID: 1385191110}
