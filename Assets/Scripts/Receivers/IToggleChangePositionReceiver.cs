@@ -20,6 +20,9 @@ public class IToggleChangePositionReceiver : MonoBehaviour, IReceiver
 
     [SerializeField] float objectSlideSpeed;
 
+    [SerializeField] private AudioClip moveClip;
+    private AudioSource audioSource;
+
     float stoppingDistance = 0.2f;
 
     //Rigidbody rBody;
@@ -29,6 +32,7 @@ public class IToggleChangePositionReceiver : MonoBehaviour, IReceiver
     private void Start()
     {
         isAtPositionA = startAtPositionA;
+        audioSource = GetComponent<AudioSource>();
 
         //rBody = GetComponent<Rigidbody>();
     }
@@ -39,6 +43,12 @@ public class IToggleChangePositionReceiver : MonoBehaviour, IReceiver
         {
             isAtPositionA = polarity;
             isStopped = false;
+
+            // Plays the door movement sound once when the door starts opening or closing.
+            if (audioSource != null && moveClip != null)
+            {
+                audioSource.PlayOneShot(moveClip);
+            }
         }
     }
 

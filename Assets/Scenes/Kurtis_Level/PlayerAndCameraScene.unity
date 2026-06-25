@@ -204,12 +204,20 @@ PrefabInstance:
       value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: LandingAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf525843323cb8c4a80192b959a7682c, type: 3}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: LockCameraPosition
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: wallDetectDistance
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: FootstepAudioVolume
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: GroundLayers.m_Bits
@@ -552,7 +560,6 @@ GameObject:
   - component: {fileID: 1300372591}
   - component: {fileID: 1300372590}
   - component: {fileID: 1300372589}
-  - component: {fileID: 1300372593}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -644,27 +651,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1300372593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300372588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75efa5e912e887d489f97494a6416c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IToggleChangePositionReceiver
-  Notes: "Attach this script to any game object which you wish to have move that
-    can be manually opened and closed.\nWhen receiving a positive signal, it will
-    move to openPosition.\nWhen receiving a negatibe signal, it will move to the
-    closedPosition. \nUsage examples: Moving horizontal platform, moving vertical
-    platform (elevator), sliding door (vertical or horizontal)"
-  positionA: {x: 0, y: 0, z: 0}
-  positionB: {x: 0, y: 0, z: 0}
-  startAtPositionA: 0
-  objectSlideSpeed: 1
 --- !u!1001 &1319487276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -953,8 +939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthMax: 100
-  painClip: {fileID: 8300000, guid: 6731a96001f507b46a6b29d90d05f54b, type: 3}
-  healClip: {fileID: 8300000, guid: 6731a96001f507b46a6b29d90d05f54b, type: 3}
+  painClip: {fileID: 8300000, guid: 8698e45711dc13547ada232e1d3ea399, type: 3}
+  healClip: {fileID: 0}
   healthBar: {fileID: 1791787963}
 --- !u!114 &1520284232
 MonoBehaviour:
