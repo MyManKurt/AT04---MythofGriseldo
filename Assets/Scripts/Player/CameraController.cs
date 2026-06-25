@@ -35,9 +35,12 @@ public class CameraController : MonoBehaviour
     private GameObject cameraCollisionObject;
 
     private void Start()
-    {                
+    {
         sCollider = GetComponent<SphereCollider>();
-       // bCollider = GetComponent<BoxCollider>();
+        // bCollider = GetComponent<BoxCollider>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -54,7 +57,7 @@ public class CameraController : MonoBehaviour
         {
             SnapCameraBehindPlayer();
         }*/
-        
+
     }
 
     private void CameraFollow()

@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PlayerAndCameraScene.unity
+    path: Assets/Scenes/Kurtis_Level/Temple of Griseldo.unity
+    guid: 927da6e4ee20eae43b0aefaf7e667078
+  - enabled: 1
+    path: Assets/Scenes/Kurtis_Level/PlayerAndCameraScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/SlidingDoor_Sample.unity
-    guid: 80ffddeefaf57e6458b64114eb3e8289
-  - enabled: 1
-    path: Assets/Scenes/MovingPlatforms_Sample.unity
-    guid: 1195c2a814cef6e40a42bbc0e747764f
-  - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
+    path: Assets/Scenes/Kurtis_Level/GameOverScene.unity
     guid: 7caec31899b3da04da9467c4bb14cbf2
+  - enabled: 1
+    path: Assets/Scenes/Kurtis_Level/WinScene.unity
+    guid: ea2a8b1f8015e034bb303d64fb7bc43a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

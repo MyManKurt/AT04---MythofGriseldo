@@ -19,12 +19,17 @@ public class PlayerHealth : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         playerHealth = healthMax;
-        healthBar.fillAmount = playerHealth / 100;
+        healthBar.fillAmount = (float)playerHealth / healthMax;
     }
 
     public void AdjustHealth(int amount)
     {
-        if(amount < 0)
+        playerHealth += amount;
+        playerHealth = Mathf.Clamp(playerHealth, 0, healthMax);
+
+        healthBar.fillAmount = (float)playerHealth / healthMax;
+
+        if (amount < 0)
         {
             audioSource.PlayOneShot(painClip);
         }
@@ -32,13 +37,9 @@ public class PlayerHealth : MonoBehaviour
         {
             audioSource.PlayOneShot(healClip);
         }
-        playerHealth += amount;
-        healthBar.fillAmount = playerHealth / 100;
-        //Debug.Log("Health adjusted to " + playerHealth);
 
-        if(playerHealth < 0)
+        if (playerHealth <= 0)
         {
-            //game over
             SceneManager.LoadScene("GameOverScene");
         }
     }

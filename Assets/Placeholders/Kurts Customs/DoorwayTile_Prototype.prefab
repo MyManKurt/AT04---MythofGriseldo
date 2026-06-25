@@ -67,37 +67,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 330079060133897344, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3079919821920362140}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
---- !u!1 &2385098132830405379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 330079060133897344, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
-  m_PrefabInstance: {fileID: 2705888449979656067}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3079919821920362140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2385098132830405379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75efa5e912e887d489f97494a6416c3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IToggleChangePositionReceiver
-  Notes: "Attach this script to any game object which you wish to have move that
-    can be manually opened and closed.\nWhen receiving a positive signal, it will
-    move to openPosition.\nWhen receiving a negatibe signal, it will move to the
-    closedPosition. \nUsage examples: Moving horizontal platform, moving vertical
-    platform (elevator), sliding door (vertical or horizontal)"
-  positionA: {x: -0.055666413, y: 0, z: -0.4406664}
-  positionB: {x: -0.055666413, y: 1.37, z: -0.4406664}
-  startAtPositionA: 1
-  objectSlideSpeed: 1
 --- !u!4 &3049573229610768825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1143770838909271610, guid: 1709571d14f8e0140a3af5f54ea1860e, type: 3}
