@@ -26,10 +26,18 @@ public class IContactDamageHazard : MonoBehaviour, IHazard
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth pHealth))
+        PlayerHealth pHealth = other.GetComponentInParent<PlayerHealth>();
+
+        if (pHealth != null)
         {
             pHealth.AdjustHealth(damageAmount);
-            audioSource.PlayOneShot(hitPlayerClip);
+
+            if (audioSource != null && hitPlayerClip != null)
+            {
+                audioSource.PlayOneShot(hitPlayerClip);
+            }
+
+            Debug.Log("Player hit by hazard");
         }
     }
 }
